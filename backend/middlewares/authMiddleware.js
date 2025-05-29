@@ -19,7 +19,7 @@ const authenticate = asyncHandler(async (req, res, next) => {
       throw new Error("Not authorized, token failed.");
     }
   } else {
-    res.staus(401);
+    res.status(401);
     throw new Error("Not authorized, no token");
   }
 });
