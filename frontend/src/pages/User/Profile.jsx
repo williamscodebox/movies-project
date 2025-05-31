@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import Loader from "../../component/Loader";
+import Loader from "../../components/Loader";
 import { useProfileMutation } from "../../redux/api/users";
 import { setCredentials } from "../../redux/features/auth/authSlice";
 
@@ -46,7 +46,7 @@ const Profile = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+      <div className="bg-white mt-10 p-8 rounded-lg shadow-lg w-full max-w-lg">
         <h2 className="text-3xl font-extrabold text-center mb-6 text-gray-800">
           Update Profile
         </h2>
