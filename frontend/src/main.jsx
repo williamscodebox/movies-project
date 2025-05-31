@@ -8,6 +8,8 @@ import { Route, RouterProvider, createRoutesFromElements } from "react-router";
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
+import Register from "./pages/Auth/Register.jsx";
+import Login from "./pages/Auth/Login.jsx";
 
 //Auth
 
@@ -15,17 +17,14 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
+    <Route path="/" element={<App />} errorElement={<ErrorPage />}>
       <Route index={true} path="/" element={<Home />} />
       {/* <Route path="/" element={<Home />} errorElement={<ErrorPage />} /> */}
-      {/* // <Route path="/login" element={<Login />} />
-      // <Route path="/register" element={<Register />} />
-      //{" "}
-      <Route path="" element={<PrivateRoute />}>
-        // <Route path="/profile" element={<Profile />} />
-        //{" "}
-      </Route>
-      //{" "} */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      {/* <Route path="" element={<PrivateRoute />}> */}
+      {/* <Route path="/profile" element={<Profile />} /> */}
+      {/* </Route> */}
     </Route>
   )
 );
